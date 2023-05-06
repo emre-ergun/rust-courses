@@ -56,4 +56,14 @@ fn main() {
         println!("Hello");
         break;
     }
+
+    loop {
+        println!("Hello1");
+        if true {break;}
+    }
+
+    for num in [7, 8, 9].iter() {
+        //do stuff with num
+        println!("Hello2");
+    }
 }
