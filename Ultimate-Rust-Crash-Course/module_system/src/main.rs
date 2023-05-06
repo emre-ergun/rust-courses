@@ -1,0 +1,10 @@
+use module_system::greet;
+use rand::Rng;
+
+fn main() {
+    greet();
+
+    let mut rng = rand::thread_rng();
+    println!("Integer: {}", rng.gen_range(0..10));
+    println!("Float: {}", rng.gen_range(0.0..10.0));
+}
