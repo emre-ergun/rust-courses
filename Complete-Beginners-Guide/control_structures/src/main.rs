@@ -1,10 +1,9 @@
 use rand::Rng;
 
 fn main() {
-
     //if statement
     let mut rng = rand::thread_rng();
-    let num: u8= rng.gen_range(0, 11);
+    let num: u8 = rng.gen_range(0, 11);
 
     if num < 5 {
         println!("The random number {} is lesser than 5", num);
@@ -16,7 +15,7 @@ fn main() {
 
     let res: bool = if num > 5 { true } else { false };
     println!("Result: {}", res);
-    
+
     //match statement
     print_choice(Suit::Heart);
     print_choice(Suit::Spade);
@@ -27,8 +26,6 @@ fn main() {
     country(34);
     country(55);
     country(1235);
-
-
 }
 
 fn country(code: i32) {
@@ -36,7 +33,7 @@ fn country(code: i32) {
         44 => "UK",
         34 => "Spain",
         1..=999 => "unknown",
-        _ => "invalid" 
+        _ => "invalid",
     };
 
     println!("The country is {}", country);
@@ -45,20 +42,20 @@ enum Suit {
     Heart,
     Spade,
     Club,
-    Diamond
+    Diamond,
 }
 
 fn print_choice(choice: Suit) {
     match choice {
         Suit::Heart => {
             println!("\u{2665}");
-        },
+        }
         Suit::Spade => {
             println!("\u{2660}");
-        },
+        }
         Suit::Club => {
-            println!("\u{2663}");   
-        },
+            println!("\u{2663}");
+        }
         Suit::Diamond => {
             println!("\u{2666}");
         }
